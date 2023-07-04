@@ -4,6 +4,7 @@
     <input type="text" v-model="inputValue" />
     <button @click="getData">Get</button>
     <button @click="setData">Set</button>
+    <div :key="el" v-for="el in divArr">{{ el }}</div>
   </div>
 </template>
 <script>
