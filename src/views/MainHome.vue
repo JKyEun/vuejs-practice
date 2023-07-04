@@ -5,6 +5,8 @@
     <button @click="getData">Get</button>
     <button @click="setData">Set</button>
     <div :key="el" v-for="el in divArr">{{ el }}</div>
+    <div v-if="isDivShowed">Div1</div>
+    <div v-show="isDivShowed">Div2</div>
   </div>
 </template>
 <script>
@@ -14,6 +16,7 @@ export default {
       title: 'HOME',
       inputValue: 'Hi',
       divArr: ['1', '2', '3', '4', '5'],
+      isDivShowed: false,
     };
   },
   watch: {
