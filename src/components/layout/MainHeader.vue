@@ -1,9 +1,9 @@
 <template lang="">
   <div>
     <ul class="header-ul">
-      <li>About</li>
-      <li>Buy</li>
-      <li>Sell</li>
+      <router-link to="/">Home</router-link>
+      <router-link to="/about">About</router-link>
+      <li>Login</li>
       <li>My Home</li>
     </ul>
   </div>

@@ -1,5 +1,8 @@
 <template>
   <MainHeader />
+  <div id="content" class="content">
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
