@@ -1,17 +1,16 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <MainHeader />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MainHeader from './components/layout/MainHeader.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    MainHeader,
+  },
+};
 </script>
 
 <style>
