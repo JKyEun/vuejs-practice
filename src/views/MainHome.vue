@@ -12,7 +12,13 @@ export default {
     return {
       title: 'HOME',
       inputValue: 'Hi',
+      divArr: ['1', '2', '3', '4', '5'],
     };
+  },
+  watch: {
+    inputValue() {
+      console.log('watch', this.inputValue);
+    },
   },
   methods: {
     getData() {
@@ -21,6 +27,19 @@ export default {
     setData() {
       this.inputValue = 'Changed';
     },
+  },
+  beforeMount() {
+    console.log('beforeMount');
+  },
+  mounted() {
+    console.log('mounted');
+  },
+  beforeUpdate() {
+    console.log('beforeUpdate');
+  },
+  updated() {
+    console.log('updated');
+    console.log('inputValue', this.inputValue);
   },
 };
 </script>
