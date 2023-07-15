@@ -5,8 +5,12 @@ const store = new Vuex.Store({
         count: 0
     },
     mutations: {
-        increment: state => state.count++,
-        decrement: state => state.count--
+        increment: (state, payload) => {
+            state.count += payload.amount
+        },
+        decrement: (state, payload) => {
+            state.count -= payload.amount
+        }
     }
 })
 

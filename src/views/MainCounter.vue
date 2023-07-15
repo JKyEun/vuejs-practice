@@ -18,10 +18,10 @@ export default {
     },
     methods: {
         up() {
-            store.commit('increment')
+            store.commit('increment', { amount: 10 })
         },
         down() {
-            store.commit('decrement')
+            store.commit('decrement', { amount: 10 })
         }
     }
 }
