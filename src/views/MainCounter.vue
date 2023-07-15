@@ -1,26 +1,29 @@
 <template lang="">
-  <div>
-    <h1>Counter</h1>
-    <div>{{ count }}</div>
-    <button @click="up">UP</button>
-    <button @click="down">DOWN</button>
-  </div>
+    <div>
+        <h1>Counter</h1>
+        <div>{{ count }}</div>
+        <button @click="up">UP</button>
+        <button @click="down">DOWN</button>
+    </div>
 </template>
+
 <script>
+import store from '../store/index'
+
 export default {
-  data() {
-    return {
-      count: 0,
-    };
-  },
-  methods: {
-    up() {
-      this.count++;
+    computed: {
+        count() {
+            return store.state.count
+        }
     },
-    down() {
-      this.count--;
-    },
-  },
-};
+    methods: {
+        up() {
+            store.commit('increment')
+        },
+        down() {
+            store.commit('decrement')
+        }
+    }
+}
 </script>
 <style lang=""></style>
